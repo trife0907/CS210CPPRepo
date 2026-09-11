@@ -11,12 +11,14 @@
 
 #include "shape_utils.h"   // pull in the promises we're about to keep
 
-double circleArea(double radius) {
+double circleArea(double radius){
     // TODO: return the area of a circle with this radius (pi * radius * radius)
+    return 3.14 * radius *radius;
 }
 
 double rectangleArea(double width, double height) {
     // TODO: return width times height
+    return width*height;
 }
 
 // Notice: this file has ZERO knowledge of who calls these functions.
