@@ -11,14 +11,19 @@
 
 #pragma once
 
-#include <vector>
+// Note: upon seeing these files for the first time, it seems like the code here
+// was outdated or from a previous semester. It used std::vector<> when our assignment
+// explicitly told us not to use that. There were other small differences too.
+// I changed the code here to resemble our assignment better.
 
 class Stack {
 public:
+    Stack();
     void push(int value);   // add to the top
-    void pop();              // remove the top (does nothing if empty)
-    int top() const;         // look at the top without removing it
+    int pop();              // remove the top (does nothing if empty)
+    int peek() const;         // look at the top without removing it
     bool isEmpty() const;
+    bool isFull() const;
     int size() const;
 
 private:
@@ -28,5 +33,6 @@ private:
     // list next semester, every .cpp file that #includes this header
     // and only calls push/pop/top/isEmpty/size doesn't need to change
     // at all.
-    std::vector<int> data_;
+    int data[100];
+    int topIndex;
 };

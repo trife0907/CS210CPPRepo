@@ -7,25 +7,57 @@
 // the same way, nothing calling this class would ever notice.
 
 #include "Stack.h"
+#include <iostream>
+
+#include <cstdio>
+#include <iostream>
+#include <ostream>
+
+Stack::Stack() : topIndex(-1) { // Initialize topIndex to -1 because stack is empty upon construction
+
+}
 
 void Stack::push(int value) {
-    // TODO: add value to the top of data_ (vector has a method for this)
+    // Check if stack is full first
+    if (isFull()) {
+        std::cout << "Stack is full, cannot push." << std::endl;
+        return;
+    }
+
+    data[++topIndex] = value; // Increment topIndex first, then assign value
 }
 
-void Stack::pop() {
-    // TODO: if data_ isn't empty, remove the top element
+int Stack::pop() {
+    // Check if stack is empty first
+    if (isEmpty()) {
+        std::cout << "Stack is empty, cannot pop." << std::endl;
+        return -9999;
+    }
+
+    return data[topIndex--]; // Return top element, decrement topIndex
 }
 
-int Stack::top() const {
+int Stack::peek() const {
     // TODO: return the top element of data_
     // undefined if empty -- callers should check isEmpty() first. We'll
     // harden this kind of thing later in the course.
+    // Check if stack is empty first
+    if (isEmpty()) {
+        std::cout << "Stack is empty, cannot peek." << std::endl;
+        return -9999;
+    }
+
+    return data[topIndex]; // If not empty, return the top element
 }
 
 bool Stack::isEmpty() const {
-    // TODO: return whether data_ has zero elements
+    return topIndex == -1; // We know the stack is empty when topIndex == -1
+}
+
+bool Stack::isFull() const {
+    return topIndex == 99; // Stack is full when topIndex is 99(size is 100)
 }
 
 int Stack::size() const {
-    // TODO: return how many elements are in data_ (cast to int)
+    return topIndex + 1; // topIndex + 1 because topIndex == 0 means there is 1 element
 }
