@@ -27,3 +27,10 @@ If I were to do anything different, I would probably test these functions out
 a little bit, especially the edge cases, like if the stack is full
 or empty. Unfortunately, however, my laptop is soon to die, and I must
 commit and push before it does so.
+
+## 9/12 7:03pm
+I implemented some small testing in main.cpp, and I removed all TODO
+comments in Stack.cpp. I should have done this earlier, to make
+the code a lot cleaner, but at least I have done it now. All done with
+general implementation at this point I believe. All that's left is
+to do some testing.

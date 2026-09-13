@@ -9,10 +9,6 @@
 #include "Stack.h"
 #include <iostream>
 
-#include <cstdio>
-#include <iostream>
-#include <ostream>
-
 Stack::Stack() : topIndex(-1) { // Initialize topIndex to -1 because stack is empty upon construction
 
 }
@@ -38,10 +34,6 @@ int Stack::pop() {
 }
 
 int Stack::peek() const {
-    // TODO: return the top element of data_
-    // undefined if empty -- callers should check isEmpty() first. We'll
-    // harden this kind of thing later in the course.
-    // Check if stack is empty first
     if (isEmpty()) {
         std::cout << "Stack is empty, cannot peek." << std::endl;
         return -9999;
