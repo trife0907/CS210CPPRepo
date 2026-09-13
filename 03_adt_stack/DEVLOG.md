@@ -34,3 +34,13 @@ comments in Stack.cpp. I should have done this earlier, to make
 the code a lot cleaner, but at least I have done it now. All done with
 general implementation at this point I believe. All that's left is
 to do some testing.
+
+## 9/12 7:25pm
+Ran test cases, including edge cases such as:
+- Pushing on a full stack
+- Peeking on an empty stack
+- Popping on an empty stack
+
+All the implementation seems to work as expected. Next time, I
+will find more test cases to implement as the code gets more
+complex.

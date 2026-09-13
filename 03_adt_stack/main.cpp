@@ -10,14 +10,12 @@
 int main() {
     Stack s;
 
-    s.push(10);
-    s.push(20);
-    s.push(30);
+    s.push(67);
 
     std::cout << "Stack size: " << s.size() << std::endl;
     std::cout << "Top: " << s.peek() << std::endl;
 
-    s.pop();
+    std::cout << "Pop: " << s.pop();
     std::cout << "After pop, top: " << s.peek() << std::endl;
     std::cout << "Is empty? " << (s.isEmpty() ? "yes" : "no") << std::endl;
 
